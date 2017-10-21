@@ -1,0 +1,5 @@
+CREATE DATABASE icodevdb
+    WITH
+    OWNER = icodev
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;

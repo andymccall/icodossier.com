@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * The Application class is the entry point to the main program
  *
  * @author Andy McCall, mailme@andymccall.co.uk
- * @version 0.1
+ * @version 0.2
  * @since 2017-10-21
  */
 @SpringBootApplication
@@ -19,10 +19,7 @@ public class Application {
             LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
-        logger.info("Starting SpringApplication.run()");
-
         SpringApplication.run(Application.class, args);
-
     }
 
 }

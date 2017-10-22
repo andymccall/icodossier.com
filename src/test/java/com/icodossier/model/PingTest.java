@@ -13,7 +13,7 @@ import java.time.OffsetDateTime;
  * The PingTest class is a test class that tests Ping.
  *
  * @author  Andy McCall
- * @version 0.2
+ * @version 0.3
  * @since   2017-10-21
  */
 public class PingTest {
@@ -36,7 +36,7 @@ public class PingTest {
     @Before
     public void setUp() throws Exception {
 
-        Clock mockClock =
+        mockClock =
                 Clock.fixed(
                         LocalDateTime.of(year, month, day, hour, minute, second).toInstant(OffsetDateTime.now().getOffset()),
                         Clock.systemUTC().getZone());
@@ -50,7 +50,7 @@ public class PingTest {
      */
     @Test
     public void getResponse_ResponseIsGot_Passes() throws Exception {
-        Assert.assertEquals("getResponse() has failed",
+        Assert.assertEquals("Ping.getResponse() has failed",
                 "pong", testPing.getResponse());
     }
 
@@ -59,7 +59,7 @@ public class PingTest {
      */
     @Test
     public void toString_StringReturned_Passes() throws Exception {
-        Assert.assertEquals( "toString() has failed",
+        Assert.assertEquals( "Ping.toString() has failed",
                 "Ping{response=pong, date=2017-02-03, time=21:11:00}", testPing.toString());
     }
 

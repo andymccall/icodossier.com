@@ -1,7 +1,11 @@
 package com.icodossier.model;
 
 /**
- * Created by andymccall on 22/10/2017.
+ * The IcoDetails class.
+ *
+ * @author  Andy McCall
+ * @version 0.1
+ * @since   2017-10-22
  */
 public class IcoDetails {
 

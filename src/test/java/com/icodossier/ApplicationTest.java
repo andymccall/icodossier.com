@@ -1,18 +1,10 @@
 package com.icodossier;
 
-import org.apache.catalina.core.ApplicationContext;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
-import static org.junit.Assert.*;
 
 /**
  * The ApplicationTest class is a test class that
@@ -27,26 +19,6 @@ import static org.junit.Assert.*;
 @TestPropertySource(
         locations = "classpath:test.properties")
 public class ApplicationTest {
-
-    /**
-     * Tests Application.main()
-     */
-    @Test
-    public void main_NoErrorOutput_Passes() throws Exception {
-
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setErr(new PrintStream(outContent));
-
-        String[] args = {};
-
-        try {
-            Application.main(args);
-        } catch (Exception exception) {
-        }
-
-        assertEquals("Application.main() has failed", "", outContent.toString());
-
-    }
 
     @Test
     public void contextLoads() {

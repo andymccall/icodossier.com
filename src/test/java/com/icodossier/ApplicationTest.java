@@ -44,4 +44,9 @@ public class ApplicationTest {
         assertEquals("Application.main() has failed", "", outContent.toString());
 
     }
+
+    @Test
+    public void Application_applicationContextLoads_Passes() {
+    }
+
 }

@@ -21,7 +21,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <start-class>com.icodossier.Application</start-class>
+        <start-class>com.icodossier.ApplicationMain</start-class>
     </properties>
 
     <dependencies>
@@ -130,6 +130,11 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.7.8</version>
+                <configuration>
+                    <excludes>
+                        <exclude>com.icodossier.Application</exclude>
+                    </excludes>
+                </configuration>
                 <executions>
                     <execution>
                         <id>prepare-integration-tests</id>

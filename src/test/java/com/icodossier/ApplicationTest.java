@@ -1,12 +1,7 @@
 package com.icodossier;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-import com.icodossier.controller.WebController;
-import org.junit.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -20,17 +15,13 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @since   2017-10-22
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestPropertySource(
         locations = "classpath:test.properties")
 public class ApplicationTest {
 
-    @Autowired
-    private WebController controller;
-        
     @Test
     public void contextLoads() {
-           assertThat(controller).isNotNull();
     }
 
 }

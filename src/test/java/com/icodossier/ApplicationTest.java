@@ -1,13 +1,15 @@
 package com.icodossier;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+import com.icodossier.controller.WebController;
 import org.junit.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.beans.factory.annotation.Autowired;
-import com.icodossier.controller.WebController;
 
 /**
  * The ApplicationTest class is a test class that
@@ -18,7 +20,7 @@ import com.icodossier.controller.WebController;
  * @since   2017-10-22
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest
 @TestPropertySource(
         locations = "classpath:test.properties")
 public class ApplicationTest {
@@ -28,7 +30,7 @@ public class ApplicationTest {
         
     @Test
     public void contextLoads() {
-           Assert.assertNotNull("message",controller);
+           assertThat(controller).isNotNull();
     }
 
 }

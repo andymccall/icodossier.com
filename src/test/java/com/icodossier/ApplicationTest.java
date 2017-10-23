@@ -22,6 +22,7 @@ public class ApplicationTest {
 
     @Test
     public void contextLoads() {
+            assertThat(controller).isNotNull();
     }
 
 }

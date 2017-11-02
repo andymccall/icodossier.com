@@ -63,7 +63,7 @@ public class WebControllerTest {
     }
 
     @Test
-    public void getPing_PingIsGot_Passes() throws Exception {
+    public void getWebPing_PingIsGot_Passes() throws Exception {
         this.mockMvc.perform(get("/ping.html"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("ping"))

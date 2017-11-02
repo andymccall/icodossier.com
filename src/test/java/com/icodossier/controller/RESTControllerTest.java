@@ -81,7 +81,7 @@ public class RESTControllerTest {
     }
 
     @Test
-    public void getPing_PingIsGot_Passes() throws Exception {
+    public void getRESTPing_PingIsGot_Passes() throws Exception {
         mockMvc.perform(get("/api/ping"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(contentType))
